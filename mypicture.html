@@ -1,51 +1,103 @@
+<!DOCTYPE html>
 <html>
-    <head>
-    <title>My Picture</title>
-    <body bgcolor="pink"
-        
+<head>
+    <title>My Picture Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", sans-serif;
+        }
+        .w3-row-padding img {
+            margin-bottom: 12px;
+            transition: transform 0.3s;
+        }
+        .w3-row-padding img:hover {
+            transform: scale(1.1);
+        }
+        .w3-sidebar {
+            width: 120px;
+            background: #222;
+        }
+        #main {
+            margin-left: 120px;
+        }
+        @media only screen and (max-width: 600px) {
+            #main {
+                margin-left: 0;
+            }
+        }
+    </style>
 </head>
-<style>
-    body
-    {
-        background-image: url(images/bground.jpg)
-    }
-</style>
-<body> 
+<body class="w3-black">
 
-<h1 align="center"> ˙✧˖°📷 ༘ ⋆° MY PICTURE ˙✧˖°📷 ༘ ⋆°</h1>
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar image in top left corner -->
+        <img src="images/me6.jpg" style="width:100%">
+        <a href="home.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="aboutme.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>ABOUT ME</p>
+        </a>
+        <a href="mypicture.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-eye w3-xxlarge"></i>
+            <p>MY PICTURE</p>
+        </a>
+        <a href="email.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>MAIL ME</p>
+        </a>
+    </nav>
 
-<div align="center">
-<hr size="4" color="black">
-<a href="images/friends.jpg"> 
-<img src= "images/me5.jpg" height="200" border="2" hspace="10" vspace="9" alt="my_picture"> 
-</a>
-<img src= "images/me1.jpg" height="200" border="2" hspace="10" vspace="9" alt="my_picture"> 
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="home.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="aboutme.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT ME</a>
+            <a href="mypicture.html" class="w3-bar-item w3-button" style="width:25% !important">MY PICTURE</a>
+            <a href="email.html" class="w3-bar-item w3-button" style="width:25% !important">MAIL ME</a>
+        </div>
+    </div>
 
-<img src="images/me3.jpg" height="200" border="2" hspace="10" vspace="9" alt="my_picture" > 
-<img src= "images/me4.jpg" height="200" border="2" hspace="10" vspace="9" alt="my_picture">
+    <!-- Gallery Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-50" id="gallery">
+        <h2 class="w3-text-light-grey">📷 My Picture Gallery 📷</h2>
+        <hr style="width:200px" class="w3-opacity">
 
-</div>
-</p>
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col s6 m4 l3">
+                <a href="images/friends.jpg">
+                    <img src="images/me5.jpg" style="width:100%" alt="My Picture">
+                </a>
+            </div>
+            <div class="w3-col s6 m4 l3">
+                <img src="images/me1.jpg" style="width:100%" alt="My Picture">
+            </div>
+            <div class="w3-col s6 m4 l3">
+                <img src="images/me3.jpg" style="width:100%" alt="My Picture">
+            </div>
+            <div class="w3-col s6 m4 l3">
+                <img src="images/me4.jpg" style="width:100%" alt="My Picture">
+            </div>
+        </div>
 
+        <hr class="w3-opacity">
 
-<hr size="4" color="black">
-
-<h4 style="text-align:justify;">
-    <img src="images/me6.jpg" height="200"
-    style="float; left" hspace="10" border="2">
-
-    Nama saya Ain
-
-</h4> 
-
-<br clear="all"
-
-<h2 align="right" >Myself </h2>
-<h4 style="text-align:justify;">
-    <img src="images/me7.jpg" height="200"
-    style="float; right" hspace="10" border="2" >
-
-</h4>
+        <div class="w3-center">
+            <h4>About Me</h4>
+            <p>
+                <img src="images/me6.jpg" style="width:150px; border-radius:50%; margin-bottom:10px;" alt="My Avatar">
+                My name is Ain, my full name is Nur Ain Suriani Binti Sarizam.
+            </p>
+        </div>
+    </div>
 
 </body>
 </html>
