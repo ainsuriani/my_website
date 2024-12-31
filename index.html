@@ -50,7 +50,7 @@
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important" onclick="startMusic()">HOME</a>
     <a href="aboutme.html" class="w3-bar-item w3-button" style="width:25% !important">ABOUT ME</a>
     <a href="mypicture.html" class="w3-bar-item w3-button" style="width:25% !important">MY PICTURE</a>
     <a href="email.html" class="w3-bar-item w3-button" style="width:25% !important">CONTACT ME</a>
@@ -71,12 +71,26 @@
              
               <p> 
               <div>
-                <audio controls loop="false">
-                  <source src="audio/petal-skies-245374.mp3" type="audio/ogg" >
-                  <source src="audio/petal-skies-245374.mp3" type="audio/mpeg">
-                  Your browser does not support the midea
-                </div>
+                <!-- JAVASCRIPT - Audio element --> 
+              <audio id="audio-container" controls loop> 
+              <source src="audio/petal-skies-245374.mp3" type="audio/mp3"> 
+              Your browser does not support the audio element. 
+              </audio> 
+
+              <script> 
+              // JavaScript to play music when any button is clicked 
+              const music = document.getElementById('audio-container'); 
+              const buttons = document.querySelectorAll('.buttons a'); 
+
+              buttons.forEach(button => { 
+              button.addEventListener('click', () => { 
+              music.play(); 
+              }); 
+              }); 
+              </script>
+              </div>
               </p>
+
               <p>
               <script>
                 function updateDateTime() {
